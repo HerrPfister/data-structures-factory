@@ -1,7 +1,7 @@
 class AQueue(object):
 
     def __init__(self, size):
-        self.storage = [None] * size
+        self.container = [None] * size
         self.current_size = 0
         self.front_item = 0
         self.empty_space = 0
@@ -14,7 +14,7 @@ class AQueue(object):
         if self.isFull():
             print("Queue is full")
         else:
-            self.storage[self.empty_space] = value
+            self.container[self.empty_space] = value
             self.empty_space = (self.empty_space + 1) % self.max
             self.current_size = self.current_size + 1
 
@@ -22,8 +22,8 @@ class AQueue(object):
         if self.isEmpty():
             return "Queue is Empty"
 
-        removed_value = self.storage[self.front_item]
-        self.storage[self.front_item] = None
+        removed_value = self.container[self.front_item]
+        self.container[self.front_item] = None
         self.front_item = (self.front_item + 1) % self.max
         self.current_size = self.current_size - 1
         return removed_value
@@ -43,4 +43,4 @@ class AQueue(object):
         if self.isEmpty():
             return "Queue is Empty"
 
-        return self.storage[self.front_item]
+        return self.container[self.front_item]

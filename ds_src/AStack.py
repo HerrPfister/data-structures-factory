@@ -1,7 +1,7 @@
 class AStack(object):
 
     def __init__(self, size):
-        self.storage = [None] * size
+        self.container = [None] * size
         self.max = size
         self.top = -1
 
@@ -13,14 +13,14 @@ class AStack(object):
             print("Stack is Full")
         else:
             self.top = self.top + 1
-            self.storage[self.top] = value
+            self.container[self.top] = value
 
     def pop(self):
         if self.isEmpty():
             return "Stack is Empty"
 
-        removed_value = self.storage[self.top]
-        self.storage[self.top] = None
+        removed_value = self.container[self.top]
+        self.container[self.top] = None
         self.top = self.top - 1
         return removed_value
 
@@ -39,4 +39,4 @@ class AStack(object):
         if self.isEmpty():
             print("Stack is Empty")
 
-        return self.storage[self.top]
+        return self.container[self.top]
