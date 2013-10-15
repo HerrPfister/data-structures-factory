@@ -1,4 +1,4 @@
-from ds_src import LLQueue, LLStack, AQueue, AStack
+from ds_src import LLQueue, LLStack, AQueue, AStack, AVector
 
 
 class DSFactory(object):
@@ -11,6 +11,9 @@ class DSFactory(object):
 
     def makeArrayQueue(self, value):
         return AQueue.AQueue(value)
+
+    def makeArrayVector(self, value):
+        return AVector.AVector(value)
 
     def makeListQueue(self):
         return LLQueue.LLQueue()
