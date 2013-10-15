@@ -7,7 +7,7 @@ class DSFactory(object):
         print("Factory Created")
 
     def makeArrayStack(self, value):
-        return AStack.AQueue(value)
+        return AStack.AStack(value)
 
     def makeArrayQueue(self, value):
         return AQueue.AQueue(value)
