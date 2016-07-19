@@ -1,4 +1,4 @@
-class AQueue(object):
+class Queue(object):
 
     def __init__(self, size):
         self.container = [None] * size

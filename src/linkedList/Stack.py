@@ -1,7 +1,6 @@
-import LLNode
+import Node
 
-
-class LLStack(object):
+class Stack(object):
 
     def __init__(self):
         self.head = None
@@ -12,9 +11,9 @@ class LLStack(object):
 
     def push(self, val):
         if self.isEmpty():
-            self.head = LLNode.LLNode(val)
+            self.head = Node.Node(val)
         else:
-            newNode = LLNode.LLNode(val)
+            newNode = Node.Node(val)
             newNode._next_setter = self.head
             self.head = newNode
 

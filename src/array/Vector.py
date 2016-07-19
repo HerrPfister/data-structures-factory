@@ -1,4 +1,4 @@
-class AVector(object):
+class Vector(object):
 
     def __init__(self, size):
         self.container = [None] * size

@@ -1,7 +1,7 @@
-import LLNode
+import Node
 
 
-class LLQueue(object):
+class Queue(object):
 
     def __init__(self):
         self.head = None
@@ -13,10 +13,10 @@ class LLQueue(object):
 
     def enqueue(self, val):
         if self.isEmpty():
-            self.head = LLNode.LLNode(val)
+            self.head = Node.Node(val)
             self.tail = self.head
         else:
-            newNode = LLNode.LLNode(val)
+            newNode = Node.Node(val)
             self.tail._next_setter = newNode
             self.tail = newNode
 

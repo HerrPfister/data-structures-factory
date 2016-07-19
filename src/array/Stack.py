@@ -1,4 +1,4 @@
-class AStack(object):
+class Stack(object):
 
     def __init__(self, size):
         self.container = [None] * size

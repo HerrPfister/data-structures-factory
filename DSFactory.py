@@ -1,4 +1,6 @@
-from ds_src import LLQueue, LLStack, AQueue, AStack, AVector
+from src.array import Queue as ArrayQueue, Stack as ArrayStack, Vector as ArrayVector
+from src.linkedList import Queue as LLQueue, Stack as LLStack
+from src.tree import Heap
 
 
 class DSFactory(object):
@@ -6,17 +8,20 @@ class DSFactory(object):
     def __init__(self):
         print("Factory Created")
 
+    def makeHeap(self, size, comparer):
+        return Heap.Heap(size, comparer)
+
     def makeArrayStack(self, value):
-        return AStack.AStack(value)
+        return ArrayStack.Stack(value)
 
     def makeArrayQueue(self, value):
-        return AQueue.AQueue(value)
+        return ArrayQueue.Queue(value)
 
     def makeArrayVector(self, value):
-        return AVector.AVector(value)
+        return ArrayVector.Vector(value)
 
     def makeListQueue(self):
-        return LLQueue.LLQueue()
+        return LLQueue.Queue()
 
     def makeListStack(self):
-        return LLStack.LLStack()
+        return LLStack.Stack()
